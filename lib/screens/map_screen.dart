@@ -34,43 +34,47 @@ class _MapScreenState extends State<MapScreen> {
               ),
             ),
             ListTile(
-              leading: const Icon(Icons.home),
-              title: const Text('Home'),
+              leading: const Icon(Icons.home_outlined, color: Colors.teal),
+              title: const Text("Home"),
               onTap: () {
                 Navigator.pop(context);
-                Navigator.pushReplacementNamed(context, '/home');
+                Navigator.pushNamed(context, '/home');
               },
             ),
             ListTile(
-              leading: const Icon(Icons.photo),
-              title: const Text('Gallery'),
+              leading: const Icon(
+                Icons.photo_library_outlined,
+                color: Colors.teal,
+              ),
+              title: const Text("Gallery"),
               onTap: () {
                 Navigator.pop(context);
                 Navigator.pushNamed(context, '/gallery');
               },
             ),
             ListTile(
-              leading: const Icon(Icons.map),
-              title: const Text('Map'),
+              leading: const Icon(Icons.map_outlined, color: Colors.teal),
+              title: const Text("Map"),
               onTap: () {
                 Navigator.pop(context);
+                Navigator.pushNamed(context, '/map');
               },
             ),
             ListTile(
-              leading: const Icon(Icons.camera_alt),
-              title: const Text('Camera'),
+              leading: const Icon(
+                Icons.camera_alt_outlined,
+                color: Colors.teal,
+              ),
+              title: const Text("Camera"),
               onTap: () {
                 Navigator.pop(context);
                 Navigator.pushNamed(context, '/camera');
               },
             ),
             ListTile(
-              leading: const Icon(Icons.logout),
+              leading: const Icon(Icons.logout, color: Colors.red),
               title: const Text('Logout'),
-              onTap: () {
-                Navigator.pop(context);
-                Navigator.pushReplacementNamed(context, '/login');
-              },
+              onTap: () => Navigator.pushReplacementNamed(context, '/login'),
             ),
           ],
         ),
