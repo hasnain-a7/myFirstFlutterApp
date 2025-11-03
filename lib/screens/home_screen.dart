@@ -70,8 +70,7 @@ class _HomeScreenState extends State<HomeScreen> {
   }
 
   Future<void> _launchGitHub() async {
-    const url =
-        'https://github.com/hasnain-a7/myFirstFlutterApp.git'; // replace with your GitHub URL
+    const url = 'https://github.com/hasnain-a7/myFirstFlutterApp';
     if (!await launchUrl(
       Uri.parse(url),
       mode: LaunchMode.externalApplication,
@@ -119,8 +118,7 @@ class _HomeScreenState extends State<HomeScreen> {
                 backgroundColor: Colors.white,
                 backgroundImage: profilePic.isNotEmpty
                     ? NetworkImage(profilePic)
-                    : const AssetImage('assets/default_avatar.png')
-                          as ImageProvider,
+                    : const AssetImage('assets/BATMAN.jpg') as ImageProvider,
               ),
             ),
             Expanded(
@@ -145,6 +143,14 @@ class _HomeScreenState extends State<HomeScreen> {
                     onTap: () {
                       Navigator.pop(context);
                       Navigator.pushNamed(context, '/map');
+                    },
+                  ),
+                  ListTile(
+                    leading: const Icon(Icons.camera_alt),
+                    title: const Text('Camera'),
+                    onTap: () {
+                      Navigator.pop(context);
+                      Navigator.pushNamed(context, '/camera');
                     },
                   ),
                   ListTile(

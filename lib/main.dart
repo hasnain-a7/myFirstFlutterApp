@@ -4,6 +4,7 @@ import 'screens/signup_screen.dart';
 import 'screens/home_screen.dart';
 import 'screens/gallery_screen.dart';
 import 'screens/map_screen.dart';
+import 'screens/camera_screen.dart';
 
 void main() {
   runApp(const MyApp());
@@ -28,6 +29,7 @@ class MyApp extends StatelessWidget {
         '/home': (context) => const HomeScreen(),
         '/gallery': (context) => const GalleryScreen(),
         '/map': (context) => const MapScreen(),
+        '/camera': (context) => const CameraScreen(),
       },
     );
   }

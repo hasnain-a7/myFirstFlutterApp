@@ -57,6 +57,14 @@ class _MapScreenState extends State<MapScreen> {
               },
             ),
             ListTile(
+              leading: const Icon(Icons.camera_alt),
+              title: const Text('Camera'),
+              onTap: () {
+                Navigator.pop(context);
+                Navigator.pushNamed(context, '/camera');
+              },
+            ),
+            ListTile(
               leading: const Icon(Icons.logout),
               title: const Text('Logout'),
               onTap: () {
